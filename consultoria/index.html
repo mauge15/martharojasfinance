@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ed">
+  <meta name="description" content="Análisis estratégico, financiero y cuantitativo para ayudar a empresas a responder preguntas importantes sobre su negocio y decidir dónde actuar.">
+  <meta property="og:title" content="Estrategia y análisis para empresas — Martha Rojas, CFA">
+  <meta property="og:description" content="¿Qué te gustaría entender de tu negocio que hoy no puedes responder?">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://martharojas.com/consultoria/">
+  <title>Estrategia y análisis para empresas — Martha Rojas, CFA</title>
+  <style>
+    :root{--cream:#f7f5ed;--paper:#fffefa;--ink:#173a3d;--teal:#17888b;--muted:#657473;--line:#deded4;--pale:#e8ede7;--gold:#d8bc5b}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .wrap{width:min(1100px,calc(100% - 48px));margin:0 auto}
+    header{padding:22px 0;border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-size:14px;font-weight:700;letter-spacing:.1em;text-decoration:none}
+    .nav-right{display:flex;align-items:center;gap:26px;font-size:13px;color:var(--muted)}
+    .nav-right a{text-decoration:none}
+    .nav-right a:hover{color:var(--teal)}
+    .eyebrow{margin:0;color:var(--teal);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .hero{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:62px;padding:82px 0 86px}
+    h1,h2,h3,p{margin-top:0}
+    h1{max-width:720px;margin:19px 0 22px;font-family:Georgia,'Times New Roman',serif;font-size:clamp(42px,5.3vw,68px);font-weight:400;letter-spacing:-.045em;line-height:1.07}
+    .lead{max-width:660px;margin-bottom:27px;color:#415457;font-size:19px;line-height:1.65}
+    .button{display:inline-flex;align-items:center;gap:12px;padding:16px 22px;border-radius:6px;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;font-size:14px;transition:background .2s,transform .2s}
+    .button:hover{background:#126d70;transform:translateY(-1px)}
+    .hero-note{margin:15px 0 0;color:var(--muted);font-size:13px;line-height:1.55}
+    .diagram{position:relative;padding:30px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 48px rgba(23,58,61,.06)}
+    .diagram-label{margin-bottom:22px;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .question{padding:16px 17px;border-left:3px solid var(--gold);background:#f5f3e9;font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.35}
+    .connector{height:28px;width:1px;margin:0 auto;background:#bdc8c0}
+    .branches{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+    .branch{min-height:88px;padding:13px 11px;border:1px solid var(--line);border-radius:6px;background:#fff;text-align:center}
+    .branch strong{display:block;margin-bottom:6px;color:var(--teal);font-size:12px;letter-spacing:.03em}
+    .branch span{display:block;color:var(--muted);font-size:11px;line-height:1.45}
+    .decision{margin-top:15px;padding:13px 15px;border-radius:6px;background:var(--ink);color:#fff;text-align:center;font-size:13px;font-weight:700;letter-spacing:.02em}
+    .section{padding:72px 0;border-top:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:54px;align-items:start;margin-bottom:38px}
+    h2{max-width:490px;margin:12px 0 0;font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,3.6vw,44px);font-weight:400;letter-spacing:-.035em;line-height:1.13}
+    .section-intro{max-width:620px;margin:7px 0 0;color:#526263;font-size:16px;line-height:1.7}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .work-card{padding:23px 22px 24px;border:1px solid var(--line);border-radius:8px;background:rgba(255,254,250,.72)}
+    .number{display:inline-flex;width:31px;height:31px;align-items:center;justify-content:center;margin-bottom:18px;border-radius:50%;background:var(--pale);color:var(--teal);font-size:12px;font-weight:700}
+    .work-card h3{margin-bottom:9px;font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:400}
+    .work-card p{margin:0;color:#596767;font-size:14px;line-height:1.65}
+    .questions{display:grid;grid-template-columns:1fr 1fr;gap:0 52px;margin-top:30px;border-top:1px solid var(--line)}
+    .question-row{display:flex;gap:13px;padding:18px 0;border-bottom:1px solid var(--line);color:#425456;font-size:15px;line-height:1.55}
+    .question-row span{color:var(--teal);font-weight:700}
+    .about{background:var(--pale)}
+    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:54px;align-items:start}
+    .credentials{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+    .credential{padding:9px 12px;border:1px solid #cbd6cf;border-radius:999px;color:#46605f;font-size:12px}
+    .about-copy{max-width:665px;color:#425456;font-size:16px;line-height:1.75}
+    .about-copy p:last-child{margin-bottom:0}
+    .method{margin-top:25px;padding:21px 23px;border-left:3px solid var(--teal);background:rgba(255,255,255,.55);color:#3e5656;font-size:14px;line-height:1.65}
+    .contact{padding:75px 0 82px;text-align:center}
+    .contact h2{max-width:690px;margin:14px auto 17px}
+    .contact p{max-width:550px;margin:0 auto;color:#526263;font-size:16px;line-height:1.65}
+    .contact .button{margin-top:24px}
+    footer{padding:22px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+    .footer-inner{display:flex;justify-content:space-between;gap:18px}
+    footer a{text-decoration:none}
+    @media(max-width:760px){
+      .wrap{width:min(100% - 34px,620px)}
+      header{padding:17px 0}.nav-right{gap:14px;font-size:12px}
+      .hero{grid-template-columns:1fr;gap:32px;padding:56px 0 60px}
+      .hero-copy{text-align:left}.lead{font-size:17px}
+      .diagram{max-width:520px;margin:0 auto;width:100%;padding:22px}
+      .section{padding:56px 0}.section-head,.about-grid{grid-template-columns:1fr;gap:16px;margin-bottom:28px}
+      .work-grid{grid-template-columns:1fr;gap:11px}.work-card{padding:20px}
+      .questions{grid-template-columns:1fr;gap:0}
+      .contact{padding:58px 0 64px}
+      .footer-inner{display:block;text-align:center}.footer-inner span{display:block;margin:5px 0}
+    }
+    @media(max-width:420px){.nav-right{gap:10px}.nav-right a{font-size:11px}.brand{font-size:12px}.branches{gap:5px}.branch{padding:11px 6px}.branch span{font-size:10px}.branch strong{font-size:11px}.diagram{padding:17px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/consultoria/" aria-label="Martha Rojas, inicio">MARTHA ROJAS</a>
+      <nav class="nav-right" aria-label="Navegación principal">
+        <a href="#enfoque">Enfoque</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="/guia/">Guía de inversión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Estrategia · Finanzas · Análisis</p>
+        <h1>¿Qué te gustaría entender de tu negocio que hoy no puedes responder?</h1>
+        <p class="lead">Trabajo con equipos directivos para descubrir qué está impulsando sus resultados, evaluar dónde hay oportunidades y decidir qué merece atención primero.</p>
+        <a class="button" href="mailto:martha@martharojas.com?subject=Una%20pregunta%20sobre%20mi%20negocio">Hablemos de esa pregunta <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">Análisis riguroso y recomendaciones claras, adaptados a la escala de cada empresa.</p>
+      </div>
+      <div class="diagram" role="img" aria-label="Una pregunta de negocio se analiza desde crecimiento, rentabilidad y capital para llegar a prioridades de acción">
+        <p class="diagram-label">De la pregunta a la decisión</p>
+        <div class="question">¿Qué está explicando el resultado del negocio?</div>
+        <div class="connector" aria-hidden="true"></div>
+        <div class="branches">
+          <div class="branch"><strong>Crecimiento</strong><span>Clientes · productos · canales</span></div>
+          <div class="branch"><strong>Rentabilidad</strong><span>Ingresos · costes · márgenes</span></div>
+          <div class="branch"><strong>Capital</strong><span>Inversión · caja · recursos</span></div>
+        </div>
+        <div class="decision">Drivers · opciones · prioridades</div>
+      </div>
+    </section>
+
+    <section class="section" id="enfoque">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Cómo trabajo</p>
+            <h2>Una pregunta clara. Un análisis que ayude a decidir.</h2>
+          </div>
+          <p class="section-intro">Cada proyecto parte de una decisión real del negocio. Ordeno la pregunta, conecto la evidencia financiera y operativa, y convierto el análisis en opciones concretas para el equipo directivo.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <span class="number">01</span>
+            <h3>Entender</h3>
+            <p>Definir la decisión pendiente, qué se sabe, qué falta por saber y qué evidencia puede responderla.</p>
+          </article>
+          <article class="work-card">
+            <span class="number">02</span>
+            <h3>Analizar</h3>
+            <p>Identificar los factores que explican el rendimiento, contrastar escenarios y cuantificar las opciones cuando los datos lo permiten.</p>
+          </article>
+          <article class="work-card">
+            <span class="number">03</span>
+            <h3>Priorizar</h3>
+            <p>Presentar las conclusiones, sus implicaciones y los próximos pasos para que el equipo pueda actuar con criterio.</p>
+          </article>
+        </div>
+        <div class="questions" aria-label="Ejemplos de preguntas de negocio">
+          <div class="question-row"><span>↗</span><div>¿Qué está impulsando el crecimiento y cuánto de él es rentable?</div></div>
+          <div class="question-row"><span>↗</span><div>¿Qué productos, clientes o canales contribuyen más al resultado?</div></div>
+          <div class="question-row"><span>↗</span><div>¿Dónde conviene asignar el siguiente euro de inversión?</div></div>
+          <div class="question-row"><span>↗</span><div>¿Qué información necesitamos para elegir entre varias opciones?</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre-mi">
+      <div class="wrap about-grid">
+        <div>
+          <p class="eyebrow">Sobre Martha</p>
+          <h2>Criterio financiero y cuantitativo, conectado con el negocio.</h2>
+          <div class="credentials" aria-label="Experiencia y acreditación">
+            <span class="credential">CFA Charterholder</span>
+            <span class="credential">BBVA Asset Management</span>
+            <span class="credential">Sareb</span>
+            <span class="credential">JLL</span>
+            <span class="credential">IBM</span>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p>Soy Martha Rojas, CFA. A lo largo de mi trayectoria he trabajado en inversión, corporate finance, análisis cuantitativo y soluciones de datos, en entornos como BBVA Asset Management, Sareb y JLL.</p>
+          <p>Mi formación combina finanzas, informática e inteligencia artificial. Esa mezcla me permite abordar una pregunta desde la lógica económica del negocio y desde la información y las herramientas disponibles para responderla.</p>
+          <div class="method">La tecnología puede formar parte del trabajo cuando ayuda a obtener mejores respuestas o a llevar una decisión a la práctica. El punto de partida es siempre la pregunta de negocio.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap contact" id="contacto">
+      <p class="eyebrow">Primer paso</p>
+      <h2>¿Qué es lo primero que te gustaría entender de tu negocio y hoy no puedes responder?</h2>
+      <p>Si tienes una pregunta importante y necesitas analizarla con rigor, cuéntamela. Podemos empezar por una conversación breve.</p>
+      <a class="button" href="mailto:martha@martharojas.com?subject=Una%20pregunta%20sobre%20mi%20negocio">Escríbeme <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span>© 2026 Martha Rojas, CFA</span><span><a href="mailto:martha@martharojas.com">martha@martharojas.com</a></span><span><a href="/guia/">Guía de inversión</a></span></div>
+  </footer>
+</body>
+</html>
